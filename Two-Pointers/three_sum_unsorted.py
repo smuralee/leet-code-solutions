@@ -1,12 +1,10 @@
 class Solution(object):
-
     def binary_search(target, nums):
         li = 0
         ri = len(nums) - 1
         FOUND = False
         print(nums, target)
         while li <= ri:
-
             ti = (li + ri) // 2
             if nums[ti] > target:
                 ri = ti - 1
@@ -19,9 +17,8 @@ class Solution(object):
         return nums[ti], FOUND
 
     def ThreeSum(self, nums):
-
         """
-        Attempt to write algo in Nlog(N), 
+        Attempt to write algo in Nlog(N),
         failed version, will not pass all test cases
         """
 
@@ -34,7 +31,6 @@ class Solution(object):
         right_index = len(nums) - 1
 
         while left_index < right_index:
-
             print(left_index, right_index)
             #  O(N)
             target = 0 - (nums[left_index] + nums[right_index])
@@ -49,11 +45,15 @@ class Solution(object):
 
             else:
                 #  conduct a binary search on the rest (Olog(N))
-                temp_nums = nums[:left_index] + nums[left_index + 1:right_index] + nums[right_index + 1:]
+                temp_nums = (
+                    nums[:left_index]
+                    + nums[left_index + 1 : right_index]
+                    + nums[right_index + 1 :]
+                )
 
                 num, FOUND = Solution.binary_search(target, temp_nums)
                 print(num, FOUND)
-                # adding to the res list 
+                # adding to the res list
                 if FOUND:
                     temp_list = [
                         nums[left_index],
@@ -66,17 +66,16 @@ class Solution(object):
                     left_index += 1
                     right_index -= 1
 
-                    # if num > 0: 
-                    #     left_index += 1 
-
-                    # elif num == 0: 
+                    # if num > 0:
                     #     left_index += 1
-                    #     right_index -=1 
-                    # else: 
-                    #     right_index -=1 
+
+                    # elif num == 0:
+                    #     left_index += 1
+                    #     right_index -=1
+                    # else:
+                    #     right_index -=1
 
                 else:
-
                     if num > target:
                         right_index -= 1
 
@@ -86,7 +85,6 @@ class Solution(object):
         return res[1:]
 
     def threeSum(slef, nums):
-
         """
         O(n**2) complexity
         """
@@ -108,9 +106,7 @@ class Solution(object):
                 r = len(nums) - 1
 
                 while l < r:
-
                     if point + nums[l] + nums[r] == 0:
-
                         if [nums[l], point, nums[r]] != res[-1]:
                             res.append([nums[l], point, nums[r]])
 
@@ -118,7 +114,6 @@ class Solution(object):
                         r -= 1
 
                     elif point + nums[l] + nums[r] < 0:
-
                         l += 1
 
                     else:
@@ -126,8 +121,7 @@ class Solution(object):
 
         return res[1:]
 
-    def ThreeSum_hashset(self, nums, target): 
-        
+    # def ThreeSum_hashset(self, nums, target):
 
 
 if __name__ == "__main__":
