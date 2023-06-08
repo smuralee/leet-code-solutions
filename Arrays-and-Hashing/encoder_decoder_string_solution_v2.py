@@ -2,15 +2,14 @@ from typing import List
 
 
 class Codec:
-
     def encode(self, strs: List[str]) -> str:
         """
         Encodes a list of strings to a single string.
-        
+
         :type strs: List[str]
         :type: str
         """
-        res = ''
+        res = ""
 
         for str in strs:
             res += f"{len(str)}|{str}"
@@ -18,18 +17,16 @@ class Codec:
         return res
 
     def decode(self, s: str) -> List[str]:
-
         res = []
         end = 0
         start = 0
         while end < len(s):
-
             if s[end].isdigit():
                 end += 1
 
             else:
                 length = int(s[start:end])
-                res.append(s[end + 1:end + 1 + length])
+                res.append(s[end + 1 : end + 1 + length])
 
                 end += 1 + length
                 start = end

@@ -1,7 +1,8 @@
-from typing import List 
+from typing import List
+
+
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-
         """
 
         Returns:
@@ -9,11 +10,11 @@ class Solution:
 
 
                 - [1,2], [3,4]
-                -  2 an 3 
+                -  2 an 3
 
                 - [1,5], [3,4]
                 - 3 and 4
-                
+
                 - [1,2,3,4], []
 
                 [ .       ]
@@ -37,4 +38,4 @@ class Solution:
 
         """
 
-        return None 
+        return None

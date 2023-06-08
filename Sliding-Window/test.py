@@ -6,6 +6,5 @@ d[10] = 8
 
 print(d)
 
-for key, value in d.items(): 
-
+for key, value in d.items():
     print(key, value)

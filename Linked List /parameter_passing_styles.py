@@ -1,8 +1,8 @@
-# pass by value 
+# pass by value
 from typing import List
 
-def modiylist(b:List): 
 
+def modiylist(b: List):
     print(a)
     print(b)
     print()
@@ -20,9 +20,7 @@ def modiylist(b:List):
 
 
 a = [0]
-modiylist(a) 
+modiylist(a)
 
 
-
-
-# pass 
+# pass

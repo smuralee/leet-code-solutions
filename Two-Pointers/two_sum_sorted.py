@@ -15,7 +15,6 @@ class Solution(object):
         large_index = len(numbers) - 1
 
         while numbers[small_index] + numbers[large_index] != target:
-
             # print(numbers[small_index], numbers[large_index])
 
             if numbers[small_index] + numbers[large_index] > target:
@@ -40,9 +39,7 @@ class Solution(object):
         large_index = len(numbers) - 1
 
         while numbers[small_index] + numbers[large_index] != target:
-
             if numbers[small_index] + numbers[large_index] > target:
-
                 large_index -= 1
 
             else:

@@ -13,7 +13,6 @@ class Solution(object):
         max_f = 0
 
         for r in range(len(s)):
-
             count[s[r]] = count.get(s[r], 0) + 1
             max_f = max(max_f, count[s[r]])
 
@@ -28,12 +27,12 @@ class Solution(object):
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sol = Solution()
 
-    print(sol.characterReplacement('AABABBA', 1))
+    print(sol.characterReplacement("AABABBA", 1))
 
-    ## Idea 
+    ## Idea
 
     """
     ABABBA k=2

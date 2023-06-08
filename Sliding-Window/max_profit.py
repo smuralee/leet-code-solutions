@@ -16,14 +16,11 @@ class Solution(object):
             res = 0
 
             while j < len(prices):
-
                 if prices[j] > prices[i]:
-
                     sell = prices[j] if prices[j] > sell else sell
                     res = max(sell - buy, res)
 
                 else:
-
                     if prices[j] < buy:
                         buy = prices[j]
                         sell = buy
@@ -34,7 +31,7 @@ class Solution(object):
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     prices_1 = [7, 1, 5, 3, 6, 4]
     prices_2 = [7, 6, 4, 3, 1]
     prices_3 = [2, 4, 1]

@@ -10,21 +10,16 @@ class Solution(object):
 
         res = False
         while j - i > 0:
-
             # print(s[i],s[j])
 
             if s[i].isalnum():
-
                 if s[j].isalnum():
-
                     if s[i].lower() != s[j].lower():
-
                         print(f"Breaking point")
                         print(s[i], s[j])
                         return res
 
                     else:
-
                         i += 1
                         j -= 1
 
@@ -32,7 +27,6 @@ class Solution(object):
                     j -= 1
 
             else:
-
                 if s[j].isalnum():
                     i += 1
 
